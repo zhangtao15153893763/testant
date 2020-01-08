@@ -30,11 +30,17 @@ export default {
     }
   },
   created() {
+    this.getData()
   },
   methods:{
     searchfor(){
       window.console.log(111111111111111111111111111111111111111)
     },
+    getData(){
+      let name = this.$route.query.item.name
+      let msg = this.$route.query.item.msg
+      console.log(name+"::::::::::::"+msg)
+    }
   }
 
 }

@@ -124,7 +124,8 @@ export default {
       this.$router.push(path)
     },
     msgClick(item){
-      this.$router.push()
+      let name = item.name
+      this.$router.push({path:'/details',query:{item:item}})
     }
   }
 
