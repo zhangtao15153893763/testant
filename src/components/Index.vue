@@ -118,7 +118,7 @@ export default {
   },
   methods:{
     searchfor(){
-      window.console.log(111111111111111111111111111111111111111)
+      this.$router.push('/search')
     },
     clickItem(path){
       this.$router.push(path)

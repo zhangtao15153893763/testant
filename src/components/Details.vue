@@ -1,7 +1,10 @@
 <template>
   <div class="wrap">
     <div class="header">
-      <div class="leftdiv"></div>
+      <div class="leftdiv">
+        <span @click="fanhui">&lt;</span>
+        &nbsp;&nbsp;{{name}}
+      </div>
       <div class="rightdiv">
         <span></span>
         <span></span>
@@ -9,13 +12,10 @@
 
     </div>
     <div class="main">
-
+      {{msg}}
     </div>
     <div class="footer">
-<!--      <div class="item" @click="clickItem('/index')">首页</div>-->
-<!--      <div class="item" @click="clickItem('/tongxunlu')">通讯录</div>-->
-<!--      <div class="item" @click="clickItem('/find')">动态</div>-->
-<!--      <div class="item" @click="clickItem('/my')">我的</div>-->
+      <a-input style="width: 80%"/><a-button style="width: 20%">发送</a-button>
     </div>
   </div>
 </template>
@@ -26,7 +26,8 @@ export default {
   name: 'Details',
   data(){
     return {
-
+      name:'',
+      msg:''
     }
   },
   created() {
@@ -34,12 +35,17 @@ export default {
   },
   methods:{
     searchfor(){
-      window.console.log(111111111111111111111111111111111111111)
+
     },
     getData(){
       let name = this.$route.query.item.name
       let msg = this.$route.query.item.msg
-      console.log(name+"::::::::::::"+msg)
+      // console.log(name+"::::::::::::"+msg)
+      this.name = name
+      this.msg = msg
+    },
+    fanhui(){
+      this.$router.push('/index')
     }
   }
 
@@ -73,6 +79,7 @@ a {
   height:50px;
   line-height: 40px;
   text-align:center;
+  background-color: #EDEDED;
 }
 main{
   -webkit-box-flex:1;
