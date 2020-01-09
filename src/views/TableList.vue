@@ -30,17 +30,6 @@
   import { Table } from 'ant-design-vue';
   import ModalList from "./ModalList";
 
-  const dataSource= [
-    {
-      1:15,2:20,3:25
-    },
-    {
-      1:1,2:2,3:3,
-    },
-    {
-      1:12,2:23,3:25
-    },
-  ]
 
   export default{
     name:'TableList',
